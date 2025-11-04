@@ -3,53 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Phone mockup frame */
+/* Force mobile view always */
 body {
-  background: #f0f0f0;
-  margin: 0;
-  padding: 40px 20px;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Phone container */
-body > * {
   max-width: 430px;
-  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
   background: #000;
-  border-radius: 40px;
-  padding: 12px;
-  box-shadow: 
-    0 0 0 8px #1a1a1a,
-    0 0 0 12px #333,
-    0 20px 60px rgba(0,0,0,0.4),
-    0 5px 20px rgba(0,0,0,0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Phone screen */
-body > * > * {
-  border-radius: 32px;
-  overflow: hidden;
-  background: #000;
-  min-height: 800px;
-}
-
-/* Dynamic island */
-body > *::before {
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 30px;
-  background: #000;
-  border-radius: 20px;
-  z-index: 1000;
 }
 
 /* Ensure all content respects mobile width */
