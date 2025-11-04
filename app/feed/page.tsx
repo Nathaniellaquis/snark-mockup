@@ -254,8 +254,8 @@ export default function FeedPage() {
         </div>
       </div>
 
-      {/* Bottom Nav - Mobile & Desktop Optimized */}
-      <div className="fixed bottom-0 w-full bg-black/90 backdrop-blur-2xl border-t border-white/5 z-50 md:hidden">
+      {/* Bottom Nav - Always Visible */}
+      <div className="fixed bottom-0 w-full bg-black/90 backdrop-blur-2xl border-t border-white/5 z-50">
         <div className="max-w-md mx-auto flex items-center justify-around h-20 px-4">
           <button className="flex flex-col items-center gap-2 group">
             <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center">

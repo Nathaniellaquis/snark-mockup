@@ -3,31 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Force mobile view always */
-body {
-  max-width: 430px;
-  margin: 0 auto;
-  overflow-x: hidden;
-  background: #000;
-}
-
-/* Force mobile behavior by overriding all md breakpoints */
-@media screen {
-  /* Always show mobile bottom nav */
-  [class*="md:hidden"] {
-    display: flex !important;
-  }
-  
-  /* Always hide desktop floating buttons */  
-  [class*="hidden"][class*="md:flex"] {
-    display: none !important;
-  }
-}
-
-/* Ensure all content respects mobile width */
-* {
-  box-sizing: border-box;
-}
 
 @theme inline {
   --color-background: var(--background);
