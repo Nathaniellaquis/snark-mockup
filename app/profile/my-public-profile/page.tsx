@@ -219,7 +219,6 @@ export default function MyPublicProfilePage() {
         </DialogContent>
       </Dialog>
 
-      {/* Bottom Nav - Mobile */}
       <div className="fixed bottom-0 w-full bg-black/90 backdrop-blur-2xl border-t border-white/5 z-50">
         <div className="max-w-md mx-auto flex items-center justify-around h-20 px-4">
           <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
@@ -235,21 +234,19 @@ export default function MyPublicProfilePage() {
             <span className="text-[10px] font-bold text-gray-600">SEARCH</span>
           </button>
 
-          <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-2 group -mt-8">
+          {/* Create Post Button - Center */}
+          <button
+            onClick={() => router.push('/feed')}
+            className="flex flex-col items-center gap-2 group -mt-8"
+          >
             <div className="w-16 h-16 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-3xl shadow-2xl shadow-violet-600/50 flex items-center justify-center group-hover:scale-110 active:scale-95 transition-transform">
               <PlusIcon className="w-8 h-8 text-white group-hover:rotate-90 transition-transform duration-300" />
             </div>
             <span className="text-[10px] font-black text-fuchsia-400">POST</span>
           </button>
 
-          <button onClick={() => router.push('/trending')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
-            <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-              <TrendingUpIcon className="w-6 h-6 text-gray-400" />
-            </div>
-            <span className="text-[10px] font-bold text-gray-600">TRENDING</span>
-          </button>
-          <button className="flex flex-col items-center gap-2 group">
-            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center">
+          <button onClick={() => router.push('/profile')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
+            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
               <UserIcon className="w-6 h-6 text-white" />
             </div>
             <span className="text-[10px] font-black text-violet-400">PROFILE</span>

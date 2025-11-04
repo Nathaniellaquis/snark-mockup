@@ -277,7 +277,6 @@ export default function SearchPage() {
         )}
       </div>
 
-      {/* Bottom Nav - Mobile */}
       <div className="fixed bottom-0 w-full bg-black/90 backdrop-blur-2xl border-t border-white/5 z-50">
         <div className="max-w-md mx-auto flex items-center justify-around h-20 px-4">
           <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
@@ -286,8 +285,8 @@ export default function SearchPage() {
             </div>
             <span className="text-[10px] font-bold text-gray-600">HOME</span>
           </button>
-          <button className="flex flex-col items-center gap-2 group">
-            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center">
+          <button onClick={() => router.push('/search')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
+            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
               <SearchIcon className="w-6 h-6 text-white" />
             </div>
             <span className="text-[10px] font-black text-violet-400">SEARCH</span>
@@ -304,13 +303,7 @@ export default function SearchPage() {
             <span className="text-[10px] font-black text-fuchsia-400">POST</span>
           </button>
 
-          <button className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
-            <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-              <TrendingUpIcon className="w-6 h-6 text-gray-400" />
-            </div>
-            <span className="text-[10px] font-bold text-gray-600">TRENDING</span>
-          </button>
-          <button className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
+          <button onClick={() => router.push('/profile')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
             <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
               <UserIcon className="w-6 h-6 text-gray-400" />
             </div>

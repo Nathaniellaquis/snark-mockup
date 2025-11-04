@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,6 +16,7 @@ import { SnarkLogoSimple } from "@/components/snark-logo";
 import { SearchIcon, PlusIcon, FilterIcon, BellIcon, HomeIcon, TrendingUpIcon, UserIcon, ImageIcon, AlertTriangleIcon, InfoIcon, SparklesIcon } from "lucide-react";
 
 export default function FeedPage() {
+  const router = useRouter();
   const [showCreatePost, setShowCreatePost] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [createStep, setCreateStep] = useState(1);
@@ -134,7 +136,7 @@ export default function FeedPage() {
             <span className="text-xl font-black tracking-tighter text-white">SNARK</span>
           </div>
           <div className="flex items-center gap-3">
-            <button onClick={() => window.location.href = '/notifications'} className="p-2 hover:bg-white/5 rounded-lg transition-colors relative">
+            <button onClick={() => router.push('/notifications')} className="p-2 hover:bg-white/5 rounded-lg transition-colors relative">
               <BellIcon className="w-5 h-5 text-gray-400" />
               <span className="absolute top-1 right-1 w-2 h-2 bg-fuchsia-500 rounded-full" />
             </button>
@@ -254,28 +256,24 @@ export default function FeedPage() {
         </div>
       </div>
 
-      {/* Bottom Nav - Always Visible */}
       <div className="fixed bottom-0 w-full bg-black/90 backdrop-blur-2xl border-t border-white/5 z-50">
         <div className="max-w-md mx-auto flex items-center justify-around h-20 px-4">
-          <button className="flex flex-col items-center gap-2 group">
-            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center">
+          <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
+            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
               <HomeIcon className="w-6 h-6 text-white" />
             </div>
             <span className="text-[10px] font-black text-violet-400">HOME</span>
           </button>
-          <button onClick={() => window.location.href = '/search'} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
+          <button onClick={() => router.push('/search')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
             <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
               <SearchIcon className="w-6 h-6 text-gray-400" />
             </div>
             <span className="text-[10px] font-bold text-gray-600">SEARCH</span>
           </button>
 
-          {/* Create Post Button - Center of bottom nav */}
+          {/* Create Post Button - Center */}
           <button
-            onClick={() => {
-              resetCreate();
-              setShowCreatePost(true);
-            }}
+            onClick={() => router.push('/feed')}
             className="flex flex-col items-center gap-2 group -mt-8"
           >
             <div className="w-16 h-16 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-3xl shadow-2xl shadow-violet-600/50 flex items-center justify-center group-hover:scale-110 active:scale-95 transition-transform">
@@ -284,13 +282,7 @@ export default function FeedPage() {
             <span className="text-[10px] font-black text-fuchsia-400">POST</span>
           </button>
 
-          <button onClick={() => window.location.href = '/trending'} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
-            <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-              <TrendingUpIcon className="w-6 h-6 text-gray-400" />
-            </div>
-            <span className="text-[10px] font-bold text-gray-600">TRENDING</span>
-          </button>
-          <button onClick={() => window.location.href = '/profile'} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
+          <button onClick={() => router.push('/profile')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
             <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
               <UserIcon className="w-6 h-6 text-gray-400" />
             </div>
