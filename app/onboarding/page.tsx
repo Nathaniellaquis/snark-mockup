@@ -133,10 +133,10 @@ export default function OnboardingPage() {
       <div className="w-full max-w-3xl">
         {/* Header */}
         <div className="text-center mb-8">
-          <a href="/" className="inline-flex items-center gap-3 mb-6">
+          <div className="inline-flex items-center gap-3 mb-6">
             <SnarkLogoSimple size={48} />
             <span className="text-3xl font-black tracking-tighter">SNARK</span>
-          </a>
+          </div>
 
           {/* Progress */}
           <div className="max-w-md mx-auto mb-6">
