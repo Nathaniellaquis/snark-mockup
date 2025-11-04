@@ -1,15 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { SnarkLogoSimple } from "@/components/snark-logo";
-import { LayoutDashboardIcon, UsersIcon, GitMergeIcon, FileTextIcon, ActivityIcon, TrendingUpIcon, AlertCircleIcon, CheckCircleIcon } from "lucide-react";
+import { LayoutDashboardIcon, UsersIcon, GitMergeIcon, FileTextIcon, ActivityIcon, TrendingUpIcon, AlertCircleIcon, CheckCircleIcon, GraduationCapIcon, HomeIcon, SearchIcon, PlusIcon, UserIcon, SettingsIcon } from "lucide-react";
 
 export default function AdminDashboardPage() {
   const router = useRouter();
+  const [showCovinoModal, setShowCovinoModal] = useState(true);
 
   const stats = {
     totalUsers: 10247,
@@ -163,6 +165,92 @@ export default function AdminDashboardPage() {
           </Card>
         </div>
       </div>
+
+      {/* Bottom Nav */}
+      <div className="fixed bottom-0 w-full bg-black/90 backdrop-blur-2xl border-t border-white/5 z-50">
+        <div className="max-w-md mx-auto flex items-center justify-around h-20 px-2">
+          <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center transition-all">
+              <HomeIcon className="w-5 h-5 text-gray-400" />
+            </div>
+            <span className="text-[10px] font-bold text-gray-600">HOME</span>
+          </button>
+          
+          <button onClick={() => router.push('/search')} className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center transition-all">
+              <SearchIcon className="w-5 h-5 text-gray-400" />
+            </div>
+            <span className="text-[10px] font-bold text-gray-600">SEARCH</span>
+          </button>
+
+          <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-1 group">
+            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full shadow-lg shadow-violet-600/50 flex items-center justify-center transition-transform group-hover:scale-110">
+              <PlusIcon className="w-6 h-6 text-white" />
+            </div>
+            <span className="text-[9px] font-bold text-fuchsia-400">CREATE</span>
+          </button>
+
+          <button className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-xl flex items-center justify-center transition-all">
+              <SettingsIcon className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-[10px] font-black text-violet-400">ADMIN</span>
+          </button>
+          
+          <button onClick={() => router.push('/profile')} className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center transition-all">
+              <UserIcon className="w-5 h-5 text-gray-400" />
+            </div>
+            <span className="text-[10px] font-bold text-gray-600">PROFILE</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Professor Covino Easter Egg Modal */}
+      <Dialog open={showCovinoModal} onOpenChange={setShowCovinoModal}>
+        <DialogContent className="max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-center text-2xl font-black flex items-center justify-center gap-3">
+              <GraduationCapIcon className="w-8 h-8 text-violet-400" />
+              Professor Covino
+            </DialogTitle>
+          </DialogHeader>
+          <div className="space-y-6 pt-4">
+            <div className="text-center">
+              <p className="text-lg text-gray-300 mb-4">
+                "Normally we would <strong>not</strong> show this admin panel to students..."
+              </p>
+              <p className="text-base text-gray-400 mb-6">
+                "...but since this is a <span className="text-violet-400 font-bold">mockup demonstration</span>, 
+                here's a peek behind the curtain! 🎭"
+              </p>
+              <div className="p-4 bg-violet-500/10 border border-violet-500/30 rounded-lg mb-4">
+                <p className="text-sm text-violet-100">
+                  💡 This admin dashboard shows system metrics, user management, 
+                  moderation tools, and entity deduplication - all the backend 
+                  functionality that would normally be restricted to platform administrators.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-3">
+              <Button 
+                onClick={() => setShowCovinoModal(false)} 
+                variant="snark" 
+                className="flex-1"
+              >
+                Explore Admin Tools →
+              </Button>
+              <Button 
+                onClick={() => router.push('/feed')} 
+                variant="snarkGhost" 
+                className="flex-1"
+              >
+                Back to App
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
