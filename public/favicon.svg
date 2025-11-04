@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="favicon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#D946EF" />
+    </linearGradient>
+  </defs>
+
+  <!-- Lightning bolt style S for favicon -->
+  <path
+    d="M60 10 L30 45 H50 L40 90 L70 55 H50 L60 10 Z"
+    fill="url(#favicon-gradient)"
+    stroke="white"
+    stroke-width="4"
+    stroke-linejoin="miter"
+  />
+</svg>
