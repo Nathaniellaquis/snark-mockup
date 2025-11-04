@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SnarkLogoSimple } from "@/components/snark-logo";
-import { SearchIcon, MapPinIcon, BriefcaseIcon, GraduationCapIcon, HomeIcon, TrendingUpIcon, UserIcon, PlusIcon, BellIcon, ChevronRightIcon, StarIcon } from "lucide-react";
+import { SearchIcon, MapPinIcon, BriefcaseIcon, GraduationCapIcon, HomeIcon, TrendingUpIcon, UserIcon, PlusIcon, BellIcon, ChevronRightIcon, StarIcon , SettingsIcon } from "lucide-react";
 
 export default function SearchPage() {
   const router = useRouter();
@@ -278,34 +278,38 @@ export default function SearchPage() {
       </div>
 
       <div className="fixed bottom-0 w-full bg-black/90 backdrop-blur-2xl border-t border-white/5 z-50">
-        <div className="max-w-md mx-auto flex items-center justify-around h-20 px-4">
-          <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
-            <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-              <HomeIcon className="w-6 h-6 text-gray-400" />
+        <div className="max-w-md mx-auto flex items-center justify-around h-20 px-2">
+          <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center transition-all">
+              <HomeIcon className="w-5 h-5 text-gray-400" />
             </div>
             <span className="text-[10px] font-bold text-gray-600">HOME</span>
           </button>
-          <button onClick={() => router.push('/search')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
-            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-              <SearchIcon className="w-6 h-6 text-white" />
+          
+          <button onClick={() => router.push('/search')} className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-xl flex items-center justify-center transition-all">
+              <SearchIcon className="w-5 h-5 text-white" />
             </div>
             <span className="text-[10px] font-black text-violet-400">SEARCH</span>
           </button>
 
-          {/* Create Post Button - Center */}
-          <button
-            onClick={() => router.push('/feed')}
-            className="flex flex-col items-center gap-2 group -mt-8"
-          >
-            <div className="w-16 h-16 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-3xl shadow-2xl shadow-violet-600/50 flex items-center justify-center group-hover:scale-110 active:scale-95 transition-transform">
-              <PlusIcon className="w-8 h-8 text-white group-hover:rotate-90 transition-transform duration-300" />
+          <button onClick={() => router.push('/feed')} className="flex flex-col items-center gap-1 group">
+            <div className="w-12 h-12 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full shadow-lg shadow-violet-600/50 flex items-center justify-center transition-transform group-hover:scale-110">
+              <PlusIcon className="w-6 h-6 text-white" />
             </div>
-            <span className="text-[10px] font-black text-fuchsia-400">POST</span>
+            <span className="text-[9px] font-bold text-fuchsia-400">CREATE</span>
           </button>
 
-          <button onClick={() => router.push('/profile')} className="flex flex-col items-center gap-2 group opacity-40 hover:opacity-100 transition-opacity">
-            <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center group-hover:bg-white/10 transition-colors">
-              <UserIcon className="w-6 h-6 text-gray-400" />
+          <button onClick={() => router.push('/admin')} className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center transition-all">
+              <SettingsIcon className="w-5 h-5 text-gray-400" />
+            </div>
+            <span className="text-[10px] font-bold text-gray-600">ADMIN</span>
+          </button>
+          
+          <button onClick={() => router.push('/profile')} className="flex flex-col items-center gap-2 group">
+            <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center transition-all">
+              <UserIcon className="w-5 h-5 text-gray-400" />
             </div>
             <span className="text-[10px] font-bold text-gray-600">PROFILE</span>
           </button>
