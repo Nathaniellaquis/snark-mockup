@@ -57,7 +57,7 @@ export default function WelcomePage() {
                 Look up someone by name + context (school, company, city)
               </p>
 
-              <Link href="/" className="w-full">
+              <Link href="/search" className="w-full">
                 <Button variant="snark" size="xl" className="w-full">
                   <SearchIcon className="w-5 h-5" />
                   Start Searching
@@ -80,7 +80,7 @@ export default function WelcomePage() {
                 Post a firsthand report with our guided template
               </p>
 
-              <Link href="/" className="w-full">
+              <Link href="/feed" className="w-full">
                 <Button variant="snark" size="xl" className="w-full">
                   <PenIcon className="w-5 h-5" />
                   Create Post
@@ -103,7 +103,7 @@ export default function WelcomePage() {
                   <p className="text-sm text-gray-400">Explore the feed and get a feel for the platform</p>
                 </div>
               </div>
-              <Link href="/">
+              <Link href="/feed">
                 <Button variant="snarkGhost" size="lg">
                   Explore Feed
                 </Button>
