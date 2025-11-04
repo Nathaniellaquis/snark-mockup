@@ -11,6 +11,16 @@ body {
   background: #000;
 }
 
+/* Force mobile navigation to always show */
+.md\\:hidden {
+  display: flex !important;
+}
+
+/* Hide desktop elements */
+.hidden.md\\:flex {
+  display: none !important;
+}
+
 /* Ensure all content respects mobile width */
 * {
   box-sizing: border-box;
