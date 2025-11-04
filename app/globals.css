@@ -3,11 +3,53 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Force mobile view always */
+/* Phone mockup frame */
 body {
+  background: #f0f0f0;
+  margin: 0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Phone container */
+body > * {
   max-width: 430px;
-  margin: 0 auto;
-  overflow-x: hidden;
+  width: 100%;
+  background: #000;
+  border-radius: 40px;
+  padding: 12px;
+  box-shadow: 
+    0 0 0 8px #1a1a1a,
+    0 0 0 12px #333,
+    0 20px 60px rgba(0,0,0,0.4),
+    0 5px 20px rgba(0,0,0,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Phone screen */
+body > * > * {
+  border-radius: 32px;
+  overflow: hidden;
+  background: #000;
+  min-height: 800px;
+}
+
+/* Dynamic island */
+body > *::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 30px;
+  background: #000;
+  border-radius: 20px;
+  z-index: 1000;
 }
 
 /* Ensure all content respects mobile width */
@@ -58,24 +100,41 @@ body {
 :root {
   --radius: 0.625rem;
   /* Snark uses dark theme by default */
-  --background: oklch(0.145 0 0); /* Black background */
-  --foreground: oklch(0.985 0 0); /* White text */
-  --card: oklch(0.205 0 0); /* Dark card */
-  --card-foreground: oklch(0.985 0 0); /* White text on cards */
-  --popover: oklch(0.205 0 0); /* Dark popover */
-  --popover-foreground: oklch(0.985 0 0); /* White text */
-  --primary: oklch(0.922 0 0); /* Light primary */
-  --primary-foreground: oklch(0.205 0 0); /* Dark text on primary */
-  --secondary: oklch(0.269 0 0); /* Dark secondary */
-  --secondary-foreground: oklch(0.985 0 0); /* White text */
-  --muted: oklch(0.269 0 0); /* Dark muted */
-  --muted-foreground: oklch(0.708 0 0); /* Gray text */
-  --accent: oklch(0.269 0 0); /* Dark accent */
-  --accent-foreground: oklch(0.985 0 0); /* White text */
+  --background: oklch(0.145 0 0);
+  /* Black background */
+  --foreground: oklch(0.985 0 0);
+  /* White text */
+  --card: oklch(0.205 0 0);
+  /* Dark card */
+  --card-foreground: oklch(0.985 0 0);
+  /* White text on cards */
+  --popover: oklch(0.205 0 0);
+  /* Dark popover */
+  --popover-foreground: oklch(0.985 0 0);
+  /* White text */
+  --primary: oklch(0.922 0 0);
+  /* Light primary */
+  --primary-foreground: oklch(0.205 0 0);
+  /* Dark text on primary */
+  --secondary: oklch(0.269 0 0);
+  /* Dark secondary */
+  --secondary-foreground: oklch(0.985 0 0);
+  /* White text */
+  --muted: oklch(0.269 0 0);
+  /* Dark muted */
+  --muted-foreground: oklch(0.708 0 0);
+  /* Gray text */
+  --accent: oklch(0.269 0 0);
+  /* Dark accent */
+  --accent-foreground: oklch(0.985 0 0);
+  /* White text */
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%); /* Light border */
-  --input: oklch(1 0 0 / 15%); /* Light input bg */
-  --ring: oklch(0.556 0 0); /* Focus ring */
+  --border: oklch(1 0 0 / 10%);
+  /* Light border */
+  --input: oklch(1 0 0 / 15%);
+  /* Light input bg */
+  --ring: oklch(0.556 0 0);
+  /* Focus ring */
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
@@ -129,6 +188,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
