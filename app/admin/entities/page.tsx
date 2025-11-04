@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { SnarkLogoSimple } from "@/components/snark-logo";
 import { ArrowLeftIcon, GitMergeIcon, AlertTriangleIcon, CheckIcon } from "lucide-react";
 
@@ -101,7 +102,7 @@ export default function EntityManagementPage() {
 
       {/* Merge Confirmation Modal */}
       <Dialog open={showMergeModal} onOpenChange={setShowMergeModal}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-4xl font-black">Confirm Merge</DialogTitle>
           </DialogHeader>

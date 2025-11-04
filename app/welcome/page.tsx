@@ -91,7 +91,7 @@ export default function WelcomePage() {
         </div>
 
         {/* Explore Option */}
-        <Card variant="snarkGlass">
+        <Card>
           <CardContent className="pt-6 pb-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div className="flex items-center gap-4">

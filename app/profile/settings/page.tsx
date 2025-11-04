@@ -70,7 +70,7 @@ export default function SettingsPage() {
           <CardContent className="pt-8">
             <h3 className="text-2xl font-black mb-6">Account Information</h3>
 
-            <Alert variant="snarkInfo" className="mb-6">
+            <Alert variant="snark" className="mb-6">
               <InfoIcon className="h-4 w-4" />
               <AlertDescription>
                 Changing email or phone requires re-verification

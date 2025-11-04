@@ -315,7 +315,7 @@ export default function FeedPage() {
         setShowCreatePost(open);
         if (!open) resetCreate();
       }}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-5xl font-black tracking-tighter mb-2">
               {createStep === 6 ? "Post Submitted! 🎉" : "Spill the tea ☕"}
@@ -341,7 +341,7 @@ export default function FeedPage() {
             {/* Step 1: Entity Selection */}
             {createStep === 1 && (
               <div className="space-y-6">
-                <Alert variant="snarkInfo">
+                <Alert variant="snark">
                   <InfoIcon className="h-4 w-4" />
                   <AlertDescription>
                     You are posting as <strong>John Doe</strong>. Your real name will be visible as the author.
@@ -566,7 +566,7 @@ export default function FeedPage() {
                   <p className="text-gray-400">Optional - Strengthen your post with proof</p>
                 </div>
 
-                <Alert variant="snarkInfo">
+                <Alert variant="snark">
                   <InfoIcon className="h-4 w-4" />
                   <AlertDescription>
                     All metadata (EXIF) will be automatically removed for privacy. Max 5 files, 10MB each.
@@ -755,7 +755,7 @@ export default function FeedPage() {
                   </ul>
                 </div>
 
-                <Alert variant="snarkInfo">
+                <Alert variant="snark">
                   <InfoIcon className="h-4 w-4" />
                   <AlertDescription>
                     The subject ({selectedPerson}) has the right to respond. Their response (if any) will appear alongside your post.
@@ -817,7 +817,7 @@ export default function FeedPage() {
 
       {/* Filters Modal - Clean & Simple */}
       <Dialog open={showFilters} onOpenChange={setShowFilters}>
-        <DialogContent variant="snarkGlass" className="max-w-lg">
+        <DialogContent className="max-w-lg">
           <DialogHeader>
             <DialogTitle className="text-4xl font-black tracking-tighter mb-2">
               Filter

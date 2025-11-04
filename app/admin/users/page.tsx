@@ -44,7 +44,7 @@ export default function UserManagementPage() {
           <CardContent className="pt-8">
             <div className="relative mb-6">
               <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-              <Input variant="snarkGlass" placeholder="Search users..." className="h-14 pl-12" />
+              <Input placeholder="Search users..." className="h-14 pl-12" />
             </div>
 
             <div className="space-y-3">
@@ -55,10 +55,10 @@ export default function UserManagementPage() {
                     <p className="text-sm text-gray-500">{user.email}</p>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Badge variant={user.role === "admin" ? "snarkFuchsia" : user.role === "moderator" ? "snarkViolet" : "snarkGlass"}>
+                    <Badge variant={user.role === "admin" ? "snarkFuchsia" : user.role === "moderator" ? "snarkViolet" : "snarkGhost"}>
                       {user.role}
                     </Badge>
-                    <Badge variant={user.status === "active" ? "snarkGreen" : "snarkGlass"}>
+                    <Badge variant={user.status === "active" ? "snarkGreen" : "snarkGhost"}>
                       {user.status}
                     </Badge>
                   </div>

@@ -287,7 +287,7 @@ export default function PostDetailPage() {
                 </Badge>
               </div>
 
-              <Alert variant="snarkInfo" className="mb-6">
+              <Alert variant="snark" className="mb-6">
                 <AlertTriangleIcon className="h-4 w-4" />
                 <AlertDescription>
                   The subject has exercised their Right of Reply. Both perspectives are shown for fairness.
@@ -309,7 +309,7 @@ export default function PostDetailPage() {
 
       {/* Gallery Modal */}
       <Dialog open={showGallery} onOpenChange={setShowGallery}>
-        <DialogContent variant="snarkGlass" className="max-w-5xl">
+        <DialogContent className="max-w-5xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-black">
               Evidence ({galleryIndex + 1} of {post.evidence.length})
@@ -349,7 +349,7 @@ export default function PostDetailPage() {
               </p>
             )}
 
-            <Alert variant="snarkInfo">
+            <Alert variant="snark">
               <AlertTriangleIcon className="h-4 w-4" />
               <AlertDescription>
                 All location and metadata have been removed for privacy
@@ -370,7 +370,7 @@ export default function PostDetailPage() {
 
       {/* Replies Modal */}
       <Dialog open={showReplies} onOpenChange={setShowReplies}>
-        <DialogContent variant="snarkGlass" className="max-w-3xl">
+        <DialogContent className="max-w-3xl">
           <DialogHeader>
             <DialogTitle className="text-3xl font-black">
               Right of Reply Responses

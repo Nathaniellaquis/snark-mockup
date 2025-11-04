@@ -63,7 +63,7 @@ export default function ComponentsShowcase() {
           <h2 className="text-4xl font-black mb-8 tracking-tight">Buttons</h2>
 
           <div className="grid gap-8">
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Primary Variants</CardTitle>
                 <CardDescription className="text-gray-400">Main action buttons with gradient effects</CardDescription>
@@ -77,7 +77,7 @@ export default function ComponentsShowcase() {
               </CardContent>
             </Card>
 
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Ghost & Outline</CardTitle>
                 <CardDescription className="text-gray-400">Secondary action buttons</CardDescription>
@@ -96,7 +96,7 @@ export default function ComponentsShowcase() {
         <section className="mb-24">
           <h2 className="text-4xl font-black mb-8 tracking-tight">Badges</h2>
 
-          <Card variant="snarkGlass">
+          <Card>
             <CardHeader>
               <CardTitle variant="snark">All Badge Variants</CardTitle>
               <CardDescription className="text-gray-400">Labels, tags, and status indicators</CardDescription>
@@ -118,7 +118,7 @@ export default function ComponentsShowcase() {
           <h2 className="text-4xl font-black mb-8 tracking-tight">Cards</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Glass Card</CardTitle>
                 <CardDescription className="text-gray-400">Semi-transparent with backdrop blur</CardDescription>
@@ -165,7 +165,7 @@ export default function ComponentsShowcase() {
           <h2 className="text-4xl font-black mb-8 tracking-tight">Form Inputs</h2>
 
           <div className="grid gap-6">
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Text Inputs</CardTitle>
                 <CardDescription className="text-gray-400">Input fields and text areas</CardDescription>
@@ -177,7 +177,7 @@ export default function ComponentsShowcase() {
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Glass Input</label>
-                  <Input variant="snarkGlass" placeholder="Glass variant..." />
+                  <Input placeholder="Glass variant..." />
                 </div>
                 <div className="space-y-2">
                   <label className="text-sm font-semibold">Snark Textarea</label>
@@ -186,7 +186,7 @@ export default function ComponentsShowcase() {
               </CardContent>
             </Card>
 
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Checkboxes & Radio</CardTitle>
                 <CardDescription className="text-gray-400">Selection controls</CardDescription>
@@ -200,7 +200,7 @@ export default function ComponentsShowcase() {
                       <label htmlFor="check1">Snark</label>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Checkbox variant="snarkGlass" id="check2" />
+                      <Checkbox id="check2" />
                       <label htmlFor="check2">Glass</label>
                     </div>
                     <div className="flex items-center gap-2">
@@ -218,7 +218,7 @@ export default function ComponentsShowcase() {
                       <label htmlFor="r1">Snark Radio</label>
                     </div>
                     <div className="flex items-center gap-2">
-                      <RadioGroupItem variant="snarkGlass" value="option2" id="r2" />
+                      <RadioGroupItem value="option2" id="r2" />
                       <label htmlFor="r2">Glass Radio</label>
                     </div>
                     <div className="flex items-center gap-2">
@@ -230,7 +230,7 @@ export default function ComponentsShowcase() {
               </CardContent>
             </Card>
 
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Switches & Selects</CardTitle>
                 <CardDescription className="text-gray-400">Toggle and dropdown controls</CardDescription>
@@ -244,7 +244,7 @@ export default function ComponentsShowcase() {
                       <label htmlFor="s1">Snark</label>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Switch variant="snarkGlass" id="s2" />
+                      <Switch id="s2" />
                       <label htmlFor="s2">Glass</label>
                     </div>
                     <div className="flex items-center gap-2">
@@ -277,7 +277,7 @@ export default function ComponentsShowcase() {
           <h2 className="text-4xl font-black mb-8 tracking-tight">Progress & Sliders</h2>
 
           <div className="grid gap-6">
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Progress Bars</CardTitle>
                 <CardDescription className="text-gray-400">Visual progress indicators</CardDescription>
@@ -303,7 +303,7 @@ export default function ComponentsShowcase() {
               </CardContent>
             </Card>
 
-            <Card variant="snarkGlass">
+            <Card>
               <CardHeader>
                 <CardTitle variant="snark">Sliders</CardTitle>
                 <CardDescription className="text-gray-400">Adjustable value controls</CardDescription>
@@ -379,7 +379,7 @@ export default function ComponentsShowcase() {
         <section className="mb-24">
           <h2 className="text-4xl font-black mb-8 tracking-tight">Accordion</h2>
 
-          <Card variant="snarkGlass">
+          <Card>
             <CardHeader>
               <CardTitle variant="snark">FAQ Style Accordion</CardTitle>
               <CardDescription className="text-gray-400">Collapsible content panels</CardDescription>
@@ -421,7 +421,7 @@ export default function ComponentsShowcase() {
         <section className="mb-24">
           <h2 className="text-4xl font-black mb-8 tracking-tight">Dialogs</h2>
 
-          <Card variant="snarkGlass">
+          <Card>
             <CardHeader>
               <CardTitle variant="snark">Modal Dialogs</CardTitle>
               <CardDescription className="text-gray-400">Overlay content windows</CardDescription>
@@ -452,7 +452,7 @@ export default function ComponentsShowcase() {
                 <DialogTrigger asChild>
                   <Button variant="snarkGhost">Glass Dialog</Button>
                 </DialogTrigger>
-                <DialogContent variant="snarkGlass">
+                <DialogContent>
                   <DialogHeader>
                     <DialogTitle className="text-white">Glass Dialog</DialogTitle>
                     <DialogDescription className="text-gray-400">
@@ -460,7 +460,7 @@ export default function ComponentsShowcase() {
                     </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4">
-                    <Textarea variant="snarkGlass" placeholder="Your feedback..." rows={4} />
+                    <Textarea placeholder="Your feedback..." rows={4} />
                     <div className="flex gap-3 justify-end">
                       <Button variant="snarkGhost">Cancel</Button>
                       <Button variant="snark">Submit</Button>

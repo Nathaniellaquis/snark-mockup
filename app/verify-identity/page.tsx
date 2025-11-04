@@ -202,7 +202,7 @@ export default function VerifyIdentityPage() {
 
       {/* Document Scanner Modal */}
       <Dialog open={showDocScanner} onOpenChange={setShowDocScanner}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-black">Scan Your ID</DialogTitle>
             <DialogDescription className="text-gray-400">
@@ -265,7 +265,7 @@ export default function VerifyIdentityPage() {
 
       {/* Selfie Capture Modal */}
       <Dialog open={showSelfieCapture} onOpenChange={setShowSelfieCapture}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-2xl font-black">Take a Selfie</DialogTitle>
             <DialogDescription className="text-gray-400">

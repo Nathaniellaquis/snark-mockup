@@ -174,7 +174,7 @@ export default function NotificationsPage() {
                     notification.isRead ? 'opacity-60' : ''
                   }`}
                 >
-                  <Card variant="snarkGlass" className="hover:border-violet-500/50">
+                  <Card className="hover:border-violet-500/50">
                     <CardContent className="pt-6">
                       <div className="flex items-start gap-4">
                         {/* Icon */}

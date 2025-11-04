@@ -103,7 +103,7 @@ export default function RightOfReplyPage() {
         </div>
 
         {/* Info Banner */}
-        <Alert variant="snarkInfo" className="mb-8">
+        <Alert variant="snark" className="mb-8">
           <InfoIcon className="h-4 w-4" />
           <AlertDescription>
             You get ONE FREE response to each post about you. Your response appears alongside the original post and is moderated to the same standard.
@@ -199,7 +199,7 @@ export default function RightOfReplyPage() {
 
       {/* Create Response Modal */}
       <Dialog open={showResponseModal} onOpenChange={setShowResponseModal}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-4xl font-black tracking-tighter mb-2">
               Your Right of Reply
@@ -210,7 +210,7 @@ export default function RightOfReplyPage() {
           </DialogHeader>
 
           <div className="space-y-6 pt-4">
-            <Alert variant="snarkInfo">
+            <Alert variant="snark">
               <InfoIcon className="h-4 w-4" />
               <AlertDescription>
                 This is your ONE FREE response to this post. Your response will be moderated and appear alongside the original post.

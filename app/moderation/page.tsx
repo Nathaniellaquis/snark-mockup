@@ -12,7 +12,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Progress } from "@/components/ui/progress";
 import { SnarkLogoSimple } from "@/components/snark-logo";
-import { ShieldIcon, AlertTriangleIcon, CheckIcon, XIcon, ArrowUpIcon, FlagIcon, StarIcon, BellIcon, EyeIcon, ClockIcon } from "lucide-react";
+import { ShieldIcon, AlertTriangleIcon, CheckIcon, XIcon, ArrowUpIcon, FlagIcon, StarIcon, BellIcon, EyeIcon, ClockIcon, EditIcon, InfoIcon } from "lucide-react";
 
 export default function ModerationPage() {
   const router = useRouter();
@@ -146,13 +146,13 @@ export default function ModerationPage() {
 
         {/* Stats */}
         <div className="grid md:grid-cols-4 gap-4 mb-8">
-          <Card variant="snarkGlass">
+          <Card>
             <CardContent className="pt-6">
               <p className="text-sm text-gray-500 mb-1">Pending</p>
               <p className="text-3xl font-black text-white">{moderationQueue.length}</p>
             </CardContent>
           </Card>
-          <Card variant="snarkGlass">
+          <Card>
             <CardContent className="pt-6">
               <p className="text-sm text-gray-500 mb-1">High Risk</p>
               <p className="text-3xl font-black text-red-400">
@@ -160,13 +160,13 @@ export default function ModerationPage() {
               </p>
             </CardContent>
           </Card>
-          <Card variant="snarkGlass">
+          <Card>
             <CardContent className="pt-6">
               <p className="text-sm text-gray-500 mb-1">Avg Wait Time</p>
               <p className="text-3xl font-black text-yellow-400">32m</p>
             </CardContent>
           </Card>
-          <Card variant="snarkGlass">
+          <Card>
             <CardContent className="pt-6">
               <p className="text-sm text-gray-500 mb-1">Today</p>
               <p className="text-3xl font-black text-green-400">47</p>
@@ -190,7 +190,7 @@ export default function ModerationPage() {
                           {item.type}
                         </Badge>
                         {item.category && (
-                          <Badge variant="snarkGlass" className="text-xs">
+                          <Badge variant="snarkGhost" className="text-xs">
                             {item.category}
                           </Badge>
                         )}
@@ -256,7 +256,7 @@ export default function ModerationPage() {
 
       {/* Review Modal */}
       <Dialog open={showReviewModal} onOpenChange={setShowReviewModal}>
-        <DialogContent variant="snarkGlass" className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle className="text-4xl font-black tracking-tighter mb-2">
               Content Review
@@ -270,7 +270,7 @@ export default function ModerationPage() {
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Badge variant="snarkViolet">{selectedItem.type}</Badge>
-                    {selectedItem.category && <Badge variant="snarkGlass">{selectedItem.category}</Badge>}
+                    {selectedItem.category && <Badge variant="snarkGhost">{selectedItem.category}</Badge>}
                   </div>
                   <p className="text-sm text-gray-500 mb-4">
                     By {selectedItem.author} • {selectedItem.submittedAt}
@@ -298,7 +298,7 @@ export default function ModerationPage() {
                     <div>
                       <p className="text-sm font-bold text-gray-400 mb-2">Flagged For:</p>
                       <div className="space-y-2">
-                        {selectedItem.flaggedReasons.map((reason, idx) => (
+                        {selectedItem.flaggedReasons.map((reason: string, idx: number) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-yellow-300">
                             <FlagIcon className="w-4 h-4" />
                             {reason}
@@ -354,7 +354,7 @@ export default function ModerationPage() {
 
       {/* Reject Modal */}
       <Dialog open={showRejectModal} onOpenChange={setShowRejectModal}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-3xl font-black">Reject Content</DialogTitle>
           </DialogHeader>
@@ -397,7 +397,7 @@ export default function ModerationPage() {
 
       {/* Request Edit Modal */}
       <Dialog open={showEditRequestModal} onOpenChange={setShowEditRequestModal}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-3xl font-black">Request Edits</DialogTitle>
           </DialogHeader>
@@ -414,7 +414,7 @@ export default function ModerationPage() {
               />
             </div>
 
-            <Alert variant="snarkInfo">
+            <Alert variant="snark">
               <InfoIcon className="h-4 w-4" />
               <AlertDescription>
                 The author will receive your feedback and can resubmit after making changes.

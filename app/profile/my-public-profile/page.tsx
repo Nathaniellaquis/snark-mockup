@@ -148,7 +148,7 @@ export default function MyPublicProfilePage() {
 
       {/* Edit Profile Modal */}
       <Dialog open={showEditModal} onOpenChange={setShowEditModal}>
-        <DialogContent variant="snarkGlass" className="max-w-2xl">
+        <DialogContent className="max-w-2xl">
           <DialogHeader>
             <DialogTitle className="text-4xl font-black tracking-tighter mb-2">
               Edit Your Public Profile
